@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>ADYZ Driving School — Lessons in Bolton &amp; Greater Manchester</title>
-<meta name="description" content="ADYZ Driving School — rated 5.0 on Google. Manual & automatic driving lessons, intensive courses and refreshers in Bolton and Greater Manchester. Message us on WhatsApp to book." />
+<title>ADYZ Driving School — Driving Lessons Across the UK</title>
+<meta name="description" content="ADYZ Driving School — rated 5.0 on Google. Manual & automatic driving lessons, intensive courses and refreshers nationwide across the UK. Message us on WhatsApp to book." />
 <link rel="icon" type="image/png" href="logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -117,6 +117,25 @@ section{position:relative}
 .lesson h3{font-size:1.3rem}
 .lesson p{color:var(--mut);font-size:.95rem;margin:.2rem 0 1rem;flex:1}
 
+/* courses / prices */
+.grouptag{font-family:"Poppins";font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.74rem;color:var(--green);margin:32px 0 14px}
+.grouptag.first{margin-top:0}
+.plans{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.plan{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 22px;display:flex;flex-direction:column;position:relative;transition:transform .18s,border-color .18s,box-shadow .18s;box-shadow:var(--shad)}
+.plan:hover{transform:translateY(-3px);border-color:var(--green);box-shadow:var(--shad-lg)}
+.plan.feat{border-color:var(--green);background:linear-gradient(180deg,var(--green-tint),#fff);box-shadow:0 0 0 1px var(--green),var(--shad-lg)}
+.plan .flag{position:absolute;top:-11px;left:22px;background:var(--green);color:#fff;font-family:"Poppins";font-weight:600;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;padding:.28rem .6rem;border-radius:6px}
+.plan .lessons{font-family:"Poppins";font-weight:700;font-size:1.75rem;line-height:1}
+.plan .lessons small{font-size:.85rem;font-weight:500;color:var(--mut)}
+.plan .ideal{color:var(--mut);font-size:.85rem;margin:.5rem 0 1rem;min-height:2.4em}
+.plan .price{font-family:"Poppins";font-weight:700;font-size:2.2rem;color:var(--green);line-height:1}
+.plan .price small{display:block;font-size:.7rem;color:var(--mut-2);font-weight:500;margin-top:.4rem;line-height:1.35}
+.plan .btn{margin-top:auto}
+.rate-note{margin-top:24px;display:flex;gap:1rem;align-items:center;flex-wrap:wrap;justify-content:space-between;background:#fff;border:1px dashed var(--green);border-radius:14px;padding:16px 22px;box-shadow:var(--shad)}
+.rate-note b{color:var(--green-deep)}
+@media(max-width:940px){.plans{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.plans{grid-template-columns:1fr}.plan.feat{order:-1}}
+
 /* how it works */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;counter-reset:s;position:relative}
 .step{position:relative}
@@ -178,6 +197,7 @@ footer{background:var(--bg-soft);border-top:1px solid var(--line);padding:56px 0
       <a href="#reviews">Reviews</a>
       <a href="#why">Why us</a>
       <a href="#lessons">Lessons</a>
+      <a href="#courses">Prices</a>
       <a href="#how">How it works</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -209,7 +229,7 @@ footer{background:var(--bg-soft);border-top:1px solid var(--line);padding:56px 0
         5.0 on Google · 20 reviews
       </span>
       <h1>Pass your test with <span class="g">ADYZ</span>.</h1>
-      <p class="lead">Friendly, patient driving lessons in Bolton and Greater Manchester — manual &amp; automatic, intensive courses and refreshers. Message us and we'll get you booked in.</p>
+      <p class="lead">Friendly, patient driving lessons across the UK — manual &amp; automatic, intensive courses and refreshers. Message us and we'll get you booked in.</p>
       <div class="hero-cta">
         <a class="btn btn-wa" href="#" data-wa>
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01C17.19 3.03 14.7 2 12.04 2zm0 1.67c2.2 0 4.28.86 5.84 2.42a8.2 8.2 0 0 1 2.42 5.83c0 4.54-3.7 8.24-8.25 8.24-1.48 0-2.93-.4-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 9.87c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.25 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
@@ -218,7 +238,7 @@ footer{background:var(--bg-soft);border-top:1px solid var(--line);padding:56px 0
         <a class="btn btn-ghost" href="#lessons">See lessons</a>
       </div>
       <div class="hero-meta">
-        <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Bolton &amp; Greater Manchester</span>
+        <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Nationwide across the UK</span>
         <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 17H3v-4l2-5h11l3 5h1a1 1 0 0 1 1 1v3h-2"/><circle cx="7.5" cy="17.5" r="1.6"/><circle cx="16.5" cy="17.5" r="1.6"/></svg>Manual &amp; automatic</span>
         <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Intensive courses</span>
       </div>
@@ -302,6 +322,82 @@ footer{background:var(--bg-soft);border-top:1px solid var(--line);padding:56px 0
   </div>
 </section>
 
+<!-- COURSES / PRICES -->
+<section class="pad" id="courses">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Course packages</span>
+      <h2>Lesson packages &amp; prices.</h2>
+      <p>Every package includes a pre-booked practical test after completion — automatic or manual. Not sure which fits? Message us and we'll help you choose.</p>
+    </div>
+
+    <div class="grouptag first rv">Experienced &amp; intermediate drivers</div>
+    <div class="plans">
+      <div class="plan rv">
+        <div class="lessons">10 <small>lessons</small></div>
+        <div class="ideal">Ideal for experienced &amp; international drivers</div>
+        <div class="price">£330<small>Incl. pre-booked practical test</small></div>
+        <a class="btn btn-dark btn-block btn-sm" href="#" data-wa data-course="the 10-lesson course (£330)" style="margin-top:16px">Enquire</a>
+      </div>
+      <div class="plan rv">
+        <div class="lessons">15 <small>lessons</small></div>
+        <div class="ideal">Experienced drivers wanting more practice</div>
+        <div class="price">£450<small>Incl. pre-booked practical test</small></div>
+        <a class="btn btn-dark btn-block btn-sm" href="#" data-wa data-course="the 15-lesson course (£450)" style="margin-top:16px">Enquire</a>
+      </div>
+      <div class="plan rv">
+        <div class="lessons">20 <small>lessons</small></div>
+        <div class="ideal">Ideal for intermediate drivers</div>
+        <div class="price">£590<small>Incl. pre-booked practical test</small></div>
+        <a class="btn btn-dark btn-block btn-sm" href="#" data-wa data-course="the 20-lesson course (£590)" style="margin-top:16px">Enquire</a>
+      </div>
+      <div class="plan rv">
+        <div class="lessons">25 <small>lessons</small></div>
+        <div class="ideal">Intermediate drivers building confidence</div>
+        <div class="price">£700<small>Incl. pre-booked practical test</small></div>
+        <a class="btn btn-dark btn-block btn-sm" href="#" data-wa data-course="the 25-lesson course (£700)" style="margin-top:16px">Enquire</a>
+      </div>
+    </div>
+
+    <div class="grouptag rv">Beginners</div>
+    <div class="plans">
+      <div class="plan feat rv">
+        <span class="flag">Most popular</span>
+        <div class="lessons">30 <small>lessons</small></div>
+        <div class="ideal">Ideal for beginners — the full learn-from-scratch course</div>
+        <div class="price">£850<small>Incl. pre-booked test · £24/hr effective</small></div>
+        <a class="btn btn-wa btn-block btn-sm" href="#" data-wa data-course="the 30-lesson course (£850)" style="margin-top:16px">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01C17.19 3.03 14.7 2 12.04 2z"/></svg>
+          Enquire
+        </a>
+      </div>
+      <div class="plan rv">
+        <div class="lessons">35 <small>lessons</small></div>
+        <div class="ideal">Beginners wanting extra time behind the wheel</div>
+        <div class="price">£999<small>Incl. pre-booked practical test</small></div>
+        <a class="btn btn-dark btn-block btn-sm" href="#" data-wa data-course="the 35-lesson course (£999)" style="margin-top:16px">Enquire</a>
+      </div>
+      <div class="plan rv">
+        <div class="lessons">40 <small>lessons</small></div>
+        <div class="ideal">Beginners who want to be fully test-confident</div>
+        <div class="price">£1150<small>Incl. pre-booked practical test</small></div>
+        <a class="btn btn-dark btn-block btn-sm" href="#" data-wa data-course="the 40-lesson course (£1150)" style="margin-top:16px">Enquire</a>
+      </div>
+      <div class="plan rv">
+        <div class="lessons">45 <small>lessons</small></div>
+        <div class="ideal">The most thorough beginner course we offer</div>
+        <div class="price">£1250<small>Incl. pre-booked practical test</small></div>
+        <a class="btn btn-dark btn-block btn-sm" href="#" data-wa data-course="the 45-lesson course (£1250)" style="margin-top:16px">Enquire</a>
+      </div>
+    </div>
+
+    <div class="rate-note rv">
+      <div><b>Rates drop the longer you learn.</b> <span class="muted">£30/hour standard, down to £24/hour on 30+ lesson courses.</span></div>
+      <a class="btn btn-wa btn-sm" href="#" data-wa>Ask about a custom plan</a>
+    </div>
+  </div>
+</section>
+
 <!-- HOW -->
 <section class="pad" id="how">
   <div class="wrap">
@@ -323,7 +419,7 @@ footer{background:var(--bg-soft);border-top:1px solid var(--line);padding:56px 0
   <div class="wrap">
     <div class="cta rv">
       <h2>Ready to get on the road?</h2>
-      <p>Message ADYZ Driving School on WhatsApp and we'll get you booked in across Bolton and Greater Manchester.</p>
+      <p>Message ADYZ Driving School on WhatsApp and we'll get you booked in — nationwide across the UK.</p>
       <a class="btn btn-wa" href="#" data-wa style="font-size:1.1rem;padding:1rem 1.7rem">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01C17.19 3.03 14.7 2 12.04 2zm0 1.67c2.2 0 4.28.86 5.84 2.42a8.2 8.2 0 0 1 2.42 5.83c0 4.54-3.7 8.24-8.25 8.24-1.48 0-2.93-.4-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 9.87c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.25 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
         Message ADYZ on WhatsApp
@@ -339,7 +435,7 @@ footer{background:var(--bg-soft);border-top:1px solid var(--line);padding:56px 0
     <div class="foot-grid">
       <div class="foot-brand">
         <img src="logo.png" alt="ADYZ Driving School" />
-        <p>Patient, 5-star driving lessons — manual &amp; automatic, intensive and refresher courses across Bolton &amp; Greater Manchester.</p>
+        <p>Patient, 5-star driving lessons — manual &amp; automatic, intensive and refresher courses nationwide across the UK.</p>
       </div>
       <div class="foot">
         <h4>Explore</h4>
@@ -357,7 +453,7 @@ footer{background:var(--bg-soft);border-top:1px solid var(--line);padding:56px 0
     </div>
     <div class="legal">
       <span>© <span id="yr"></span> ADYZ Driving School Ltd · Company No. 17172006</span>
-      <span>Bolton &amp; Greater Manchester</span>
+      <span>Nationwide across the UK</span>
     </div>
   </div>
 </footer>
