@@ -8,7 +8,7 @@
 <link rel="icon" type="image/png" href="logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#ffffff;
@@ -32,17 +32,17 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font-family:"Inter",system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-h1,h2,h3{font-family:"Poppins",sans-serif;letter-spacing:-.02em;line-height:1.08;font-weight:700}
+h1,h2,h3{font-family:"Plus Jakarta Sans",sans-serif;letter-spacing:-.02em;line-height:1.08;font-weight:700}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
 .muted{color:var(--mut)}
 
 /* dashed-lane eyebrow (brand motif) */
-.eyebrow{font-family:"Poppins";font-weight:600;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--green);display:inline-flex;align-items:center;gap:.6rem}
+.eyebrow{font-family:"Plus Jakarta Sans";font-weight:600;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--green);display:inline-flex;align-items:center;gap:.6rem}
 .eyebrow::before{content:"";width:22px;height:0;border-top:3px dashed var(--green);display:inline-block}
 
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font-family:"Poppins";font-weight:600;font-size:1rem;padding:.85rem 1.45rem;border-radius:12px;cursor:pointer;border:1px solid transparent;transition:transform .16s,box-shadow .16s,background .16s,border-color .16s;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font-family:"Plus Jakarta Sans";font-weight:600;font-size:1rem;padding:.85rem 1.45rem;border-radius:12px;cursor:pointer;border:1px solid transparent;transition:transform .16s,box-shadow .16s,background .16s,border-color .16s;white-space:nowrap}
 .btn svg{width:20px;height:20px;flex:none}
 .btn-wa{background:var(--wa);color:#04210f;box-shadow:0 10px 24px -12px rgba(34,198,93,.7)}
 .btn-wa:hover{transform:translateY(-2px);box-shadow:0 16px 32px -12px rgba(34,198,93,.85)}
@@ -94,7 +94,7 @@ section{position:relative}
 
 /* google review strip */
 .review-strip{display:flex;align-items:center;justify-content:center;gap:1.4rem;flex-wrap:wrap;text-align:center}
-.review-strip .score{font-family:"Poppins";font-weight:700;font-size:2.6rem;color:var(--ink);line-height:1}
+.review-strip .score{font-family:"Plus Jakarta Sans";font-weight:700;font-size:2.6rem;color:var(--ink);line-height:1}
 .review-strip .rs-stars{display:flex;gap:3px}
 .review-strip .rs-stars svg{width:22px;height:22px;color:var(--star)}
 .review-strip .rs-sub{color:var(--mut);font-size:.95rem}
@@ -108,7 +108,7 @@ section{position:relative}
 @media(min-width:760px){.shot{width:calc(50% - 9px);scroll-snap-align:start}}
 .shot img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
 .shot:hover img{transform:scale(1.04)}
-.shot .cap{position:absolute;left:0;right:0;bottom:0;padding:16px 18px;background:linear-gradient(0deg,rgba(0,0,0,.62),transparent);color:#fff;font-family:"Poppins";font-weight:600;font-size:.95rem;display:flex;align-items:center;gap:.45rem}
+.shot .cap{position:absolute;left:0;right:0;bottom:0;padding:16px 18px;background:linear-gradient(0deg,rgba(0,0,0,.62),transparent);color:#fff;font-family:"Plus Jakarta Sans";font-weight:600;font-size:.95rem;display:flex;align-items:center;gap:.45rem}
 .shot .cap svg{width:16px;height:16px;color:#8ff08a;flex:none}
 .car-btn{position:absolute;top:calc(50% - 14px);transform:translateY(-50%);z-index:5;width:46px;height:46px;border-radius:50%;background:#fff;border:1px solid var(--line-strong);box-shadow:var(--shad-lg);display:grid;place-items:center;cursor:pointer;color:var(--ink);transition:border-color .15s,color .15s,opacity .15s}
 .car-btn:hover{border-color:var(--green);color:var(--green)}
@@ -133,22 +133,22 @@ section{position:relative}
 .lessons{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .lesson{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;display:flex;flex-direction:column;gap:.3rem;transition:transform .18s,border-color .18s,box-shadow .18s;box-shadow:var(--shad)}
 .lesson:hover{transform:translateY(-3px);border-color:var(--green);box-shadow:var(--shad-lg)}
-.lesson .tag{font-family:"Poppins";font-weight:600;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-bottom:.35rem}
+.lesson .tag{font-family:"Plus Jakarta Sans";font-weight:600;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-bottom:.35rem}
 .lesson h3{font-size:1.3rem}
 .lesson p{color:var(--mut);font-size:.95rem;margin:.2rem 0 1rem;flex:1}
 
 /* courses / prices */
-.grouptag{font-family:"Poppins";font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.74rem;color:var(--green);margin:32px 0 14px}
+.grouptag{font-family:"Plus Jakarta Sans";font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.74rem;color:var(--green);margin:32px 0 14px}
 .grouptag.first{margin-top:0}
 .plans{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .plan{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 22px;display:flex;flex-direction:column;position:relative;transition:transform .18s,border-color .18s,box-shadow .18s;box-shadow:var(--shad)}
 .plan:hover{transform:translateY(-3px);border-color:var(--green);box-shadow:var(--shad-lg)}
 .plan.feat{border-color:var(--green);background:linear-gradient(180deg,var(--green-tint),#fff);box-shadow:0 0 0 1px var(--green),var(--shad-lg)}
-.plan .flag{position:absolute;top:-11px;left:22px;background:var(--green);color:#fff;font-family:"Poppins";font-weight:600;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;padding:.28rem .6rem;border-radius:6px}
-.plan .lessons{font-family:"Poppins";font-weight:700;font-size:1.75rem;line-height:1}
+.plan .flag{position:absolute;top:-11px;left:22px;background:var(--green);color:#fff;font-family:"Plus Jakarta Sans";font-weight:600;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;padding:.28rem .6rem;border-radius:6px}
+.plan .lessons{font-family:"Plus Jakarta Sans";font-weight:700;font-size:1.75rem;line-height:1}
 .plan .lessons small{font-size:.85rem;font-weight:500;color:var(--mut)}
 .plan .ideal{color:var(--mut);font-size:.85rem;margin:.5rem 0 1rem;min-height:2.4em}
-.plan .price{font-family:"Poppins";font-weight:700;font-size:2.2rem;color:var(--green);line-height:1}
+.plan .price{font-family:"Plus Jakarta Sans";font-weight:700;font-size:2.2rem;color:var(--green);line-height:1}
 .plan .price small{display:block;font-size:.7rem;color:var(--mut-2);font-weight:500;margin-top:.4rem;line-height:1.35}
 .plan .btn{margin-top:auto}
 .rate-note{margin-top:24px;display:flex;gap:1rem;align-items:center;flex-wrap:wrap;justify-content:space-between;background:#fff;border:1px dashed var(--green);border-radius:14px;padding:16px 22px;box-shadow:var(--shad)}
@@ -159,7 +159,7 @@ section{position:relative}
 /* how it works */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;counter-reset:s;position:relative}
 .step{position:relative}
-.step .n{counter-increment:s;width:46px;height:46px;border-radius:12px;background:var(--ink);color:#fff;font-family:"Poppins";font-weight:700;display:grid;place-items:center;font-size:1.15rem;margin-bottom:16px}
+.step .n{counter-increment:s;width:46px;height:46px;border-radius:12px;background:var(--ink);color:#fff;font-family:"Plus Jakarta Sans";font-weight:700;display:grid;place-items:center;font-size:1.15rem;margin-bottom:16px}
 .step .n::before{content:counter(s)}
 .step h3{font-size:1.2rem;margin-bottom:.35rem}
 .step p{color:var(--mut);font-size:.96rem}
@@ -177,7 +177,7 @@ footer{background:var(--bg-soft);border-top:1px solid var(--line);padding:56px 0
 .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1.2fr;gap:38px;margin-bottom:36px}
 .foot-brand img{height:34px;margin-bottom:14px}
 .foot-brand p{color:var(--mut);font-size:.9rem;max-width:32ch}
-.foot h4{font-family:"Poppins";font-weight:600;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mut-2);margin-bottom:14px}
+.foot h4{font-family:"Plus Jakarta Sans";font-weight:600;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mut-2);margin-bottom:14px}
 .foot a,.foot li{color:var(--ink-soft);font-size:.93rem;display:block;margin-bottom:.55rem;list-style:none}
 .foot a:hover{color:var(--green)}
 .foot .row{display:flex;gap:.55rem;align-items:flex-start}
@@ -185,7 +185,7 @@ footer{background:var(--bg-soft);border-top:1px solid var(--line);padding:56px 0
 .legal{border-top:1px solid var(--line);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:var(--mut-2);font-size:.8rem}
 
 /* float */
-.wa-float{position:fixed;right:20px;bottom:20px;z-index:70;display:inline-flex;align-items:center;gap:.55rem;background:var(--wa);color:#04210f;font-family:"Poppins";font-weight:600;padding:.8rem 1.1rem;border-radius:999px;box-shadow:0 14px 30px -10px rgba(34,198,93,.7);transition:transform .18s}
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:70;display:inline-flex;align-items:center;gap:.55rem;background:var(--wa);color:#04210f;font-family:"Plus Jakarta Sans";font-weight:600;padding:.8rem 1.1rem;border-radius:999px;box-shadow:0 14px 30px -10px rgba(34,198,93,.7);transition:transform .18s}
 .wa-float:hover{transform:scale(1.05)}
 .wa-float svg{width:23px;height:23px}
 
