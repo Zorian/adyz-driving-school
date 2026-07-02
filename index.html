@@ -100,14 +100,25 @@ section{position:relative}
 .review-strip .rs-sub{color:var(--mut);font-size:.95rem}
 .review-strip .g-logo{width:22px;height:22px;vertical-align:middle;margin-right:.3rem}
 
-/* recent passes gallery */
-.gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.shot{position:relative;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shad);aspect-ratio:4/3;background:#eef1ea}
+/* recent passes carousel */
+.carousel-wrap{position:relative}
+.carousel{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;padding:4px 2px 8px;scrollbar-width:none}
+.carousel::-webkit-scrollbar{display:none}
+.shot{flex:0 0 auto;width:min(84%,560px);scroll-snap-align:center;position:relative;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shad);aspect-ratio:4/3;background:#eef1ea}
+@media(min-width:760px){.shot{width:calc(50% - 9px);scroll-snap-align:start}}
 .shot img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
 .shot:hover img{transform:scale(1.04)}
 .shot .cap{position:absolute;left:0;right:0;bottom:0;padding:16px 18px;background:linear-gradient(0deg,rgba(0,0,0,.62),transparent);color:#fff;font-family:"Poppins";font-weight:600;font-size:.95rem;display:flex;align-items:center;gap:.45rem}
 .shot .cap svg{width:16px;height:16px;color:#8ff08a;flex:none}
-@media(max-width:640px){.gallery{grid-template-columns:1fr}}
+.car-btn{position:absolute;top:calc(50% - 14px);transform:translateY(-50%);z-index:5;width:46px;height:46px;border-radius:50%;background:#fff;border:1px solid var(--line-strong);box-shadow:var(--shad-lg);display:grid;place-items:center;cursor:pointer;color:var(--ink);transition:border-color .15s,color .15s,opacity .15s}
+.car-btn:hover{border-color:var(--green);color:var(--green)}
+.car-btn svg{width:22px;height:22px}
+.car-prev{left:-10px}.car-next{right:-10px}
+.car-btn:disabled{opacity:.3;cursor:default}
+@media(max-width:760px){.car-btn{display:none}}
+.dots{display:flex;justify-content:center;gap:8px;margin-top:20px}
+.dot{width:8px;height:8px;border-radius:50%;background:rgba(30,30,28,.22);border:none;padding:0;cursor:pointer;transition:width .2s,background .2s}
+.dot.active{width:22px;background:var(--green)}
 
 /* feature cards */
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -291,16 +302,21 @@ footer{background:var(--bg-soft);border-top:1px solid var(--line);padding:56px 0
       <h2>Another ADYZ driver on the road.</h2>
       <p>Real learners, real passes. You could be next — message us and we'll get you booked in.</p>
     </div>
-    <div class="gallery">
-      <div class="shot rv">
-        <img src="pass-1.jpg" alt="Happy ADYZ learner holding their practical driving test pass certificate beside the ADYZ car" loading="lazy">
-        <div class="cap"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>Passed &amp; ready for the road</div>
+    <div class="carousel-wrap">
+      <button class="car-btn car-prev" id="passPrev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="carousel" id="passCarousel">
+        <div class="shot">
+          <img src="pass-1.jpg" alt="Happy ADYZ learner holding their practical driving test pass certificate beside the ADYZ car" loading="lazy">
+          <div class="cap"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>Passed &amp; ready for the road</div>
+        </div>
+        <div class="shot">
+          <img src="pass-2.jpg" alt="ADYZ learner celebrating passing their UK driving test with pass certificate by the ADYZ car" loading="lazy">
+          <div class="cap"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>Another test passed with ADYZ</div>
+        </div>
       </div>
-      <div class="shot rv">
-        <img src="pass-2.jpg" alt="ADYZ learner celebrating passing their UK driving test with pass certificate by the ADYZ car" loading="lazy">
-        <div class="cap"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>Another test passed with ADYZ</div>
-      </div>
+      <button class="car-btn car-next" id="passNext" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 18l6-6-6-6"/></svg></button>
     </div>
+    <div class="dots" id="passDots"></div>
     <div style="text-align:center;margin-top:28px">
       <a class="btn btn-wa" href="#" data-wa>
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01C17.19 3.03 14.7 2 12.04 2z"/></svg>
@@ -523,6 +539,31 @@ document.getElementById('yr').textContent=new Date().getFullYear();
   var off=0;
   function tick(){off=(off-1.4)%52;lane.setAttribute('stroke-dashoffset',off);requestAnimationFrame(tick);}
   requestAnimationFrame(tick);
+})();
+
+/* recent passes carousel */
+(function(){
+  var car=document.getElementById('passCarousel');if(!car)return;
+  var prev=document.getElementById('passPrev'),next=document.getElementById('passNext'),dotsWrap=document.getElementById('passDots');
+  var slides=[].slice.call(car.querySelectorAll('.shot'));
+  function step(){var s=car.querySelector('.shot');return s?s.offsetWidth+18:car.clientWidth;}
+  slides.forEach(function(s,i){
+    var d=document.createElement('button');d.className='dot'+(i===0?' active':'');
+    d.setAttribute('aria-label','Go to pass '+(i+1));
+    d.addEventListener('click',function(){car.scrollTo({left:i*step(),behavior:'smooth'});});
+    dotsWrap.appendChild(d);
+  });
+  if(prev)prev.addEventListener('click',function(){car.scrollBy({left:-step(),behavior:'smooth'});});
+  if(next)next.addEventListener('click',function(){car.scrollBy({left:step(),behavior:'smooth'});});
+  function update(){
+    var idx=Math.round(car.scrollLeft/step());
+    idx=Math.max(0,Math.min(slides.length-1,idx));
+    dotsWrap.querySelectorAll('.dot').forEach(function(d,i){d.classList.toggle('active',i===idx);});
+    if(prev)prev.disabled=car.scrollLeft<8;
+    if(next)next.disabled=car.scrollLeft+car.clientWidth>=car.scrollWidth-8;
+  }
+  var raf;car.addEventListener('scroll',function(){cancelAnimationFrame(raf);raf=requestAnimationFrame(update);});
+  window.addEventListener('resize',update);update();
 })();
 
 /* reveal */
