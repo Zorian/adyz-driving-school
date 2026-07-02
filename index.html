@@ -100,6 +100,15 @@ section{position:relative}
 .review-strip .rs-sub{color:var(--mut);font-size:.95rem}
 .review-strip .g-logo{width:22px;height:22px;vertical-align:middle;margin-right:.3rem}
 
+/* recent passes gallery */
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.shot{position:relative;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shad);aspect-ratio:4/3;background:#eef1ea}
+.shot img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.shot:hover img{transform:scale(1.04)}
+.shot .cap{position:absolute;left:0;right:0;bottom:0;padding:16px 18px;background:linear-gradient(0deg,rgba(0,0,0,.62),transparent);color:#fff;font-family:"Poppins";font-weight:600;font-size:.95rem;display:flex;align-items:center;gap:.45rem}
+.shot .cap svg{width:16px;height:16px;color:#8ff08a;flex:none}
+@media(max-width:640px){.gallery{grid-template-columns:1fr}}
+
 /* feature cards */
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 24px;transition:transform .18s,border-color .18s,box-shadow .18s;box-shadow:var(--shad)}
@@ -271,6 +280,33 @@ footer{background:var(--bg-soft);border-top:1px solid var(--line);padding:56px 0
       <div class="rs-sub">Rated <b>5.0</b> from <b>20 reviews</b> on <a href="https://maps.google.com/?cid=12379888727489739797" target="_blank" rel="noopener" style="color:var(--green);font-weight:600">Google</a></div>
     </div>
     <a class="btn btn-ghost btn-sm" href="https://maps.google.com/?cid=12379888727489739797" target="_blank" rel="noopener">Read reviews</a>
+  </div>
+</section>
+
+<!-- RECENT PASSES -->
+<section class="pad" id="passes">
+  <div class="wrap">
+    <div class="sec-head rv" style="max-width:700px">
+      <span class="eyebrow">Recent passes</span>
+      <h2>Another ADYZ driver on the road.</h2>
+      <p>Real learners, real passes. You could be next — message us and we'll get you booked in.</p>
+    </div>
+    <div class="gallery">
+      <div class="shot rv">
+        <img src="pass-1.jpg" alt="Happy ADYZ learner holding their practical driving test pass certificate beside the ADYZ car" loading="lazy">
+        <div class="cap"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>Passed &amp; ready for the road</div>
+      </div>
+      <div class="shot rv">
+        <img src="pass-2.jpg" alt="ADYZ learner celebrating passing their UK driving test with pass certificate by the ADYZ car" loading="lazy">
+        <div class="cap"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>Another test passed with ADYZ</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:28px">
+      <a class="btn btn-wa" href="#" data-wa>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01C17.19 3.03 14.7 2 12.04 2z"/></svg>
+        Start your journey on WhatsApp
+      </a>
+    </div>
   </div>
 </section>
 
